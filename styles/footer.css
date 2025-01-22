@@ -1,4 +1,22 @@
 footer {
-  border: 1px solid black;
   padding: 10px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.icons {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.icons i {
+  color: #f0f8ff;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.icons i:hover {
+  color:  rgb(32, 74, 241);
 }
