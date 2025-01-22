@@ -18,36 +18,18 @@
   })
 })()
 
+// creates a popup message and redirect to login page
+document.getElementById("RegForm").addEventListener("submit", function(event) {
+  // Check if the form is valid
+  if (!this.checkValidity()) {
+    event.preventDefault(); // Stop form submission if invalid
+    return;
+  }
 
-// SHOWING NEXT FORM WHEN CLICKING A NEXT BUTTON
-const formElement = document.querySelectorAll('.form');
-const nextButtonElemet = document.querySelectorAll('.next');
-let currentFormNumber = 0;
-nextButtonElemet.forEach((next, i) => {
-  next.addEventListener('click', () => {
-    if(currentFormNumber < formElement.length-1) {
-      formElement[currentFormNumber].classList.add('hidden');
-
-      // increment whenever click next button to show the next form
-      currentFormNumber++
-      formElement[currentFormNumber].classList.remove('hidden');
-    }
-  });
-});
-
-// SHOWING PREVIOUS FORM WHEN CLICKING BACK BUTTON 
-const backButtonElement = document.querySelectorAll('.back');
-backButtonElement.forEach((back, i) => {
-  back.addEventListener('click', () => {
-    if(currentFormNumber > 0) {
-       // Hide the current form
-       formElement[currentFormNumber].classList.add('hidden');
-
-       // Show the previous form
-       currentFormNumber--;
-       formElement[currentFormNumber].classList.remove('hidden');
-    }
-  });
+  // If the form is valid, show the alert and redirect
+  event.preventDefault(); // Prevent default form submission
+  alert("Registration successful! Redirecting to login page...");
+  window.location.href = "loginpage.html"; // Redirect to login page
 });
 
 

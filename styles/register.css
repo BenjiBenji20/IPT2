@@ -17,16 +17,18 @@ form {
   padding: 1rem 3rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   background-color: rgba(240, 248, 255, 0.8); 
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
-}
 
+}
 
 .input-field {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  height: 500px;
+  justify-content: space-around;
+  height: 490px;
+
 }
 
 div.invalid-feedback, div.valid-feedback {
@@ -34,15 +36,16 @@ div.invalid-feedback, div.valid-feedback {
 }
 
 input {
-  height: 50px;
+  height: 45px;
 }
 
 .username-password-field {
   display: flex;
 }
 
-.username-password-field .username {
-  margin-right: 10px;
+.username-password-field .password {
+  margin-left: 10px;
+  width: 95%;
 }
 
 #invalidCheck3Feedback {
@@ -115,4 +118,10 @@ input {
     transform: scale(1.8);
     opacity: 0;
   }
+}
+
+.suggestion {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
